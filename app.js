@@ -1,10 +1,10 @@
 //jshint esversion:6
-
+import 'dotenv/config';
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose, { Schema } from "mongoose";
 import _ from "lodash";
-mongoose.connect('mongodb+srv://admin-tadashi:hAfdGm2xEC0HM0WU@cluster0.9kdo7hg.mongodb.net/toDoList');
+mongoose.connect(process.env.ADMIN);
 
 const itemsSchema = {
   name: String
